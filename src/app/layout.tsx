@@ -7,6 +7,7 @@ import {
 } from '@clerk/nextjs'
 import './globals.css'
 import { trTR } from "@clerk/localizations";
+import {neobrutalism } from '@clerk/themes';
 
 export default function RootLayout({
   children,
@@ -14,7 +15,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider localization={trTR}>
+    <ClerkProvider localization={trTR} appearance={{
+      baseTheme: [neobrutalism]
+    }}>
       <html lang="en">
         <body>
           <SignedOut>
